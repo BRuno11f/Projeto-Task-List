@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="./main.js"></script>
+</head>
+<body> 
+    <div class="container">
+        <h1>TASK LIST</h1>
+        <div class="textTarefaAdd">
+            <label for="tarefaText">Tarefa: </label>
+            <input type="text" name="tarefa" id="tarefaText" placeholder="Digite uma tarefa">
+        </div>
+
+        <div class="filtros">
+            <span>Filtros: </span> 
+            <button id="taskAll">Todas</button> 
+            <button id="taskPending">Pendentes</button> 
+            <button id="taskDone">Concluidas</button>
+        </div>
+
+        <div id="textTarefa" class="tarefas"></div>
+    </div>
+</body>
+</html>

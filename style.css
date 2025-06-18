@@ -1,0 +1,200 @@
+@font-face {
+    font-family: 'FontTitulo';
+    src: url('./fonts/VanillaExtractRegular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'FontTitulo', sans-serif;
+    color: white;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 850px;
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    box-shadow: 0 0 30px #033c3ffc;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 0 0 10px #030303fd;
+}
+.textTarefaAdd {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 20px;
+}
+
+#tarefaText {
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    max-width: 300px;
+    font-size: 1rem;
+    
+}
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 20px;
+    box-shadow: 0 0 20px #00000033;
+    width: 100%;
+    max-width: 500px;
+    backdrop-filter: blur(100px);
+}
+
+.filtros button {
+    background-color: white;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    font-family: 'FontTitulo', sans-serif;
+    font-size: 12px;
+    color: #010000;
+    padding: 5px 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filtros button:hover {
+    color: #01040aab;
+    box-shadow: 0px 4px 8px rgba(19, 48, 209, 0.3);
+}
+
+.tarefas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.checkbox-label {
+    display: inline;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.checkbox-label input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f0f0f0;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+.checkbox-label input[type="checkbox"]::before {
+    content: '✔';
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%) scale(0);
+    transition: transform 0.2s ease-in-out;
+}
+.checkbox-label input[type="checkbox"]:checked {
+  background-color: #45df0d;
+  border-color: #ffffff;
+  opacity: 1; 
+}
+.checkbox-label input[type="checkbox"]:checked::before {
+  transform: translate(-50%, -55%) scale(1);
+}
+.remove-botao {
+    font-size: 1.2rem;
+    color: rgb(155, 153, 153);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0px 8px;
+    transition: transform 0.2s, color 0.3s;
+}
+.remove-botao:hover {
+    color: #01040aab;
+    box-shadow: 0px 4px 8px rgba(19, 48, 209, 0.3);
+}
+.tarefa-espaco {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #00f2fe33;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px #00f2fe22;
+  transition: background-color 0.3s ease;
+}
+.texto-tarefa {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    font-size: 17px;
+    font-style: normal;
+    flex: 1;
+    word-break: break-word;
+    white-space: normal;
+}
+.concluida {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgb(92, 86, 86);
+    opacity: 0.7;
+    width: 100%;
+    flex: 1;
+    word-break: break-word;
+    white-space: normal;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
