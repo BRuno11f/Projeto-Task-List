@@ -60,7 +60,7 @@ git clone https://github.com/BRuno11f/Projeto-Task-List.git
 
 # 📷 Preview
 
-**ft
+![Preview do projeto](img/capTaskList.png)
 
 # 🗒️ Notas
 
